@@ -1,0 +1,61 @@
+.contenedor {
+  position: relative;
+  min-height: 100vh; /* Cambiamos height a min-height para abarcar todo el alto de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start; /* Cambiamos a alineación en la parte superior */
+  padding-top: 2em; /* Añadimos un espaciado superior */
+}
+
+.tittle {
+  padding-bottom: 0.5em;
+  font-size: 60px;
+  font-style: italic;
+  padding: 0.5em;
+  width: fit-content;
+  padding-bottom: 0;
+}
+
+.button {
+  position: fixed;
+  bottom: 3em;
+  left: 42%;
+  right: 42%;
+  margin: auto;
+  padding: 0.6em 1.2em;
+  font-size: 1.3em;
+}
+.text {
+  width: 60%;
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  font-size: 40px;
+  border-radius: 5px;
+  background-color: rgba(26, 60, 124, 0.205);
+  padding: 1.2em;
+  font-weight: 500;
+}
+.text span {
+  font-weight: 600;
+  font-size: 45px;
+}
+.text_secundario {
+  width: 60%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  background-color: rgba(26, 60, 124, 0.205);
+  border-radius: 11px;
+  font-size: 35px;
+  padding: 1em;
+}
+.text_secundario p {
+  padding: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}

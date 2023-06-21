@@ -1,0 +1,13 @@
+/* Pagination.module.css */
+
+.backNext {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto auto auto;
+    width: fit-content;
+  }
+  
+  .backNext button {
+    margin-right: 3em;
+  }
+  
