@@ -51,13 +51,13 @@ const Detail = () => {
           </h3>
           <h3> Population | {population && formattedPopulation} people</h3>
           </div>
-          <div>          
+          <div className={style.activities}>          
           <h3>
             Activities |{" "}
             {Activities &&
               Activities.map((a) => (
                 <div key={a.id}>
-                  <h3>Name: {a.name}</h3>
+                  <h2>Name: {a.name}</h2>
                   <h3>Duration: {a.duration}</h3>
                   <h3>Difficulty: {a.difficulty}</h3>
                   <h3>Season: {a.season}</h3>

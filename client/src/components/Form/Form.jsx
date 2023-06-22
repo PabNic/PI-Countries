@@ -124,9 +124,7 @@ const Form = () => {
               placeholder="hours..."
               onChange={handleOnChange}
             />
-            <p className={style.error}>
-              {error.duration && <p>{error.duration} </p>}
-            </p>
+            {error.duration && <p className={style.error}>{error.duration}</p>}
           </div>
 
           <div className={style.inputs}>
@@ -195,11 +193,9 @@ const Form = () => {
           {!activity.name ||
           !activity.season ||
           !activity.difficulty ||
-          !activity.countryId.length ? (
-            <p>* All fields must be completed</p>
-          ) : (
-            ""
-          )}
+          !activity.countryId.length
+            ? "* All fields must be completed"
+            : ""}
         </p>
       </form>
     </div>

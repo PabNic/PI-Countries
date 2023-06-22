@@ -9,12 +9,12 @@
   
   .orderFilter {
     overflow-wrap: break-word;
-    font-size: 12px;
+    font-size: 15px;
     background-color: rgb(37, 46, 103);
     border-radius: 10px;
     border: none;
     width: 17em;
-    padding: 0.5em;
+    
   }
   
   .orderFilter h4 {
@@ -49,7 +49,5 @@
     background-color: rgba(165, 177, 199, 0.6);
   }
   
-  .resetButton {
-    /* Estilos para el botón de restablecer filtros */
-  }
+ 
   

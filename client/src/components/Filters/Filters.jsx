@@ -11,7 +11,7 @@ import {
 
 import style from "./Filters.module.css";
 
-const Filters = () => {
+const Filters = ({ setCurrentPage }) => {
   const activities = useSelector((state) => state.activities);
   const dispatch = useDispatch();
 
@@ -24,18 +24,22 @@ const Filters = () => {
   };
 
   const handleContinentFilter = (e) => {
+    setCurrentPage(1)   
     dispatch(filterByContinent(e.target.value));
   };
   
   const handleActivityFilter = (e) => {
     if(e.target.value !== "0"){
+      setCurrentPage(1)
       dispatch(getCountriesByA(e.target.value));
     }else {
+      setCurrentPage(1)
       dispatch(setCountries())
     }
   };
 
   const handleResetFilters = () => {
+    setCurrentPage(1)
     dispatch(setCountries());
   };
 

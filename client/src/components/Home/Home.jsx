@@ -6,25 +6,30 @@ import Filters from "../Filters/Filters";
 import { useState } from "react";
 
 const Home = ({ countries }) => {
-  
-  const [firstToShow, setFirstToShow] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [countriesPerPage, setCountriesPerPage] = useState(10);
+  const indexOfLastCountry = currentPage * countriesPerPage;
+  const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
+  const currentCountries = countries.slice(
+    indexOfFirstCountry,
+    indexOfLastCountry
+  );
 
-  const handlePrevious = () => {
-    if (firstToShow < 10) return;
-    setFirstToShow(firstToShow - 10);
-  };
-
-  const handleNext = () => {
-    if (firstToShow + 10 >= countries.length) return;
-    setFirstToShow(firstToShow + 10);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
   return (
     <div className={style.home}>
       <NavBar />
-      <Filters />
-      <Pagination handlePrevious={handlePrevious} handleNext={handleNext} />
-      <Countries countries={countries} firstToShow={firstToShow} />
+      <Filters setCurrentPage={setCurrentPage} />
+      <Pagination
+        countriesPerPage={countriesPerPage}
+        countries={countries.length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
+      <Countries countries={currentCountries} />
     </div>
   );
 };

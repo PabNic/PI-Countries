@@ -1,8 +1,7 @@
 const axios = require("axios");
 const server = require("./src/server");
 const { conn } = require("./src/db.js");
-require ("dotenv").config();
-const { PORT, URL_API } = process.env;
+const PORT = 3001;
 const { Country } = require("./src/db.js");
 
 
@@ -13,7 +12,7 @@ conn
       const dataBase = Country.findAll();
 
       if (!dataBase.length) {
-        const { data } = await axios(`${URL_API}/countries`);
+        const { data } = await axios("http://localhost:5000/countries");
 
         const mappedData = data.map((country) => {
           return {

@@ -8,6 +8,7 @@ const NavBar = () => {
     <nav className={style.nav}>
       <SearchBar />
       <NavLink  className={style.button} to={"/form"}>Create Activity</NavLink>
+      <NavLink  className={style.button} to={"/"}>Go Landing</NavLink>
     </nav>
   );
 };

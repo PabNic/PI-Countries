@@ -6,7 +6,7 @@
   padding: 10px;
 }
 .navegacion img {
-  border-radius: 50%;
+  border-radius: 5%;
   width: 3em;
   position: absolute;
   right: 3em;
@@ -26,14 +26,13 @@
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 15px;
-  background-color: rgba(126, 147, 199, 0.3);
+  background-color: rgba(126, 147, 199, 0.096);
 }
 
 .izquierda {
   width: 50%;
   border-radius: 10%;
-
-  height: 77vh;
+  height: fit-content;
 }
 .izquierda h3 {
   margin-top: 6%;
@@ -49,4 +48,13 @@
   max-width: fit-content;
   margin: auto 5% auto 5%;
   width: 90%;
+}
+
+.activities {
+  justify-content: center;
+  height: fit-content;
+}
+
+.activities h2 {
+  color: rgb(165, 157, 42);
 }

@@ -20,7 +20,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: rgb(130, 144, 173);
+  color: rgb(155, 171, 204);
 }
 a {
   text-decoration: none;
@@ -32,7 +32,7 @@ a:hover {
 }
 button {
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: 20px;
   background-color: rgba(165, 176, 199, 0.6);
   color: rgb(32, 48, 84);
   border: none;
